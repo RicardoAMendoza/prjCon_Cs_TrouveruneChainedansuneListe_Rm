@@ -14,6 +14,7 @@ namespace prjCon_Cs_TrouveruneChainedansuneListe
     *  Institut Teccart
     *  www.teccart.qc.ca
     *  Hiver 2019
+    *  ÉTE 2020
     */
     class Program
     {
@@ -39,8 +40,6 @@ namespace prjCon_Cs_TrouveruneChainedansuneListe
                 Console.WriteLine("\n The List -> " + list);
                 do
                 {
-                    //Console.WriteLine("\nWrite the list -> \n", Console.ForegroundColor = ConsoleColor.Green);
-                    //list = Convert.ToString(Console.ReadLine());
                     Console.WriteLine("\nWrite the chine -> \n", Console.ForegroundColor=ConsoleColor.Yellow);
                     zchaine = Convert.ToString(Console.ReadLine().ToUpper());
                     Console.WriteLine("\n\nResultat : " + fncTrouveruneChaine(list, zchaine), Console.ForegroundColor = ConsoleColor.Yellow);
@@ -57,7 +56,7 @@ namespace prjCon_Cs_TrouveruneChainedansuneListe
             finally
             {
                 /* A common usage of catch and finally together is to obtain and use resources in a try block */
-                /*  deal with exceptional circumstances in a catch block, and release the resources in the finally block. */
+                /* deal with exceptional circumstances in a catch block, and release the resources in the finally block. */
 
                 // To run the program in Visual Studio, type CTRL+F5. Then
                 // click Cancel in the error dialog.
@@ -72,9 +71,10 @@ namespace prjCon_Cs_TrouveruneChainedansuneListe
         private static string fncTrouveruneChaine(string liste, string findChaine)
         {
             bool result = liste.Contains(findChaine); /* Contains->returns a value indicating wheter a specified substring occurs withing this string */
+                                                      /* using the specified comparison rules. */
             if (result)
             {
-                return findChaine;
+                return findChaine; /* true if the value parameter occurs within this string; otherwise, false. */
             }
             else
             {
